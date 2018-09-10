@@ -1,0 +1,82 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+label {
+    margin: 0;
+}
+
+.glyphicon-calendar:before {
+    content: "\e163";
+}
+
+.glyphicon-arrow-left:before {
+    content: "\2190";
+}
+
+.glyphicon-arrow-right:before {
+    content: "\2192";
+}
+
+.header {
+    padding-top: 85px;
+}
+
+.header__patient-form {
+    padding-left: 15px;
+}
+
+.header__form-group {
+    display: flex;
+    align-items: center;
+}
+
+.header__form_label {
+    text-transform: uppercase;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.table-patient__head-cell {
+    padding: 0 10px;
+}
+
+.table-patient__head-cell:last-child {
+    width: 60%;
+}
+
+.table-patient__row:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.table .table-patient__cell {
+    vertical-align: middle;
+}
+
+.table__form-group {
+    margin-left: 15px;
+}
+
+.table__form_label {
+    padding-right: 5px;
+}
+
+.form-control.form-control-xs {
+    height: 22px;
+}
+
+.input-group-addon {
+    border-top: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.table-patient__average {
+    font-weight: bold;
+    text-align: center;
+}

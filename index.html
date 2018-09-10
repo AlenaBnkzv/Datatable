@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+<div class="container pb-5">
+    <header class="header">
+        <div class="header__title text-center">Labrecque Family Chiropractic,PC</div>
+        <h3 class="header__main-title text-center">Scoliosis Protocol</h3>
+        <div class="header__patient-info">
+            <div class="header__patient-form no-gutters">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="header__form-group form-group">
+                            <label class="header__form_label" for="patient-name">Patient name:</label>
+                            <input class="header__form_control form-control form-control-sm" type="text"
+                                   id="patient-name">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header__form-group form-group">
+                            <label class="header__form_label" for="patient-dob">Dob:</label>
+                            <input class="header__form_control form-control form-control-sm d-inline-block" type="text"
+                                   id="patient-dob">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <table class="table">
+        <thead>
+        <tr class="table-patient__row">
+            <th class="table-patient__head-cell text-center align-middle">Date</th>
+            <th class="table-patient__head-cell align-middle">Initials</th>
+            <th class="table-patient__head-cell align-middle">Table Total Min</th>
+            <th class="table-patient__head-cell align-middle">Chair Total Min</th>
+            <th class="table-patient__head-cell align-middle">Notes (Indicate how patient tolerated treatment)</th>
+        </tr>
+        </thead>
+        <tbody id="js-table-body">
+        <tr class="table-patient__row">
+            <td class="table-patient__cell">
+                <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-format="yyyy-mm-dd">
+                    <input class="table__form-control form-control form-control-sm" type="text" value=" ">
+                </div>
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-table-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-chair-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <div class="table__form-group">
+                    <label class="table__form_label">
+                        <input type="checkbox">
+                        <span>Pt. tolerated treatment well</span>
+                    </label>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Pt. c/o after use of</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Scoliosis Table</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Chair</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Stopped treatment prematurely due to</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+
+            </td>
+        </tr>
+        <tr class="table-patient__row">
+            <td class="table-patient__cell">
+                <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-format="yyyy-mm-dd">
+                    <input class="table__form-control form-control form-control-sm" type="text" value=" ">
+                </div>
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-table-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-chair-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <div class="table__form-group">
+                    <label class="table__form_label">
+                        <input type="checkbox">
+                        <span>Pt. tolerated treatment well</span>
+                    </label>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Pt. c/o after use of</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Scoliosis Table</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Chair</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Stopped treatment prematurely due to</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+
+            </td>
+        </tr>
+        <tr class="table-patient__row">
+            <td class="table-patient__cell">
+                <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-format="yyyy-mm-dd">
+                    <input class="table__form-control form-control form-control-sm" type="text" value=" ">
+                </div>
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-table-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-chair-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <div class="table__form-group">
+                    <label class="table__form_label">
+                        <input type="checkbox">
+                        <span>Pt. tolerated treatment well</span>
+                    </label>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Pt. c/o after use of</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Scoliosis Table</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Chair</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Stopped treatment prematurely due to</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+
+            </td>
+        </tr>
+        <tr class="table-patient__row">
+            <td class="table-patient__cell">
+                <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-format="yyyy-mm-dd">
+                    <input class="table__form-control form-control form-control-sm" type="text" value=" ">
+                </div>
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-table-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-chair-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <div class="table__form-group">
+                    <label class="table__form_label">
+                        <input type="checkbox">
+                        <span>Pt. tolerated treatment well</span>
+                    </label>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Pt. c/o after use of</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Scoliosis Table</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Chair</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Stopped treatment prematurely due to</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+
+            </td>
+        </tr>
+        <tr class="table-patient__row">
+            <td class="table-patient__cell">
+                <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-format="yyyy-mm-dd">
+                    <input class="table__form-control form-control form-control-sm" type="text" value=" ">
+                </div>
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-table-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <input class="table__form-control form-control form-control-sm js-chair-min" type="text">
+            </td>
+            <td class="table-patient__cell">
+                <div class="table__form-group">
+                    <label class="table__form_label">
+                        <input type="checkbox">
+                        <span>Pt. tolerated treatment well</span>
+                    </label>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Pt. c/o after use of</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Scoliosis Table</span>
+                    </label>
+                    <label class="table__form_label">
+                        <input type="radio" name="afterUse">
+                        <span>Chair</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+                <div class="table__form-group js-checkbox-group">
+                    <label class="table__form_label">
+                        <input class="js-checkbox" type="checkbox">
+                        <span>Stopped treatment prematurely due to</span>
+                    </label>
+                    <input class="js-form-control form-control form-control-xs d-inline-block w-auto" type="text"
+                           disabled>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="table-patient__row">
+            <td class="table-patient__cell"></td>
+            <td class="table-patient__cell"></td>
+            <td class="table-patient__cell">
+                <div class="table-patient__average js-average-table">0</div>
+            </td>
+            <td class="table-patient__cell">
+                <div class="table-patient__average js-average-chair">0</div>
+            </td>
+            <td class="table-patient__cell"></td>
+        </tr>
+        </tfoot>
+    </table>
+    <hr class="hr">
+    <button id="js-add-row" class="btn btn-success">Add row</button>
+</div>
+<script src="src/js/jquery-1.8.3.min.js"></script>
+<script src="src/js/bootstrap-datetimepicker.min.js"></script>
+<script src="src/js/js.js"></script>
+
+</body>
+</html>
